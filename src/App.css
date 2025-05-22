@@ -1,0 +1,9 @@
+﻿.logo{
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+}
+a {
+    text-decoration: none;
+    color: unset;
+}

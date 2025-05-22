@@ -1,0 +1,117 @@
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+
+
+export const Mecz = () => {
+    return (
+        <Container fluid>
+            <Form>
+                <Row>
+                    <Col>
+                        <Button variant="primary" className="me-2">Dodaj</Button>
+                        <Button variant="info" className="me-2">Wróæ</Button>
+                    </Col>
+                </Row>
+                <Row className="mt-3">
+                    <Tabs defaultActiveKey="danePodstawowe" className="mb-3">
+                        <Tab eventKey="danePodstawowe" title="Dane podstawowe">
+                            <Row className="mb-3">
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label>Klub</Form.Label>
+                                        <Form.Control type="text" />
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label>Imie</Form.Label>
+                                        <Form.Control type="text" />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                            <Row className="mb-3">
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label>Nazwisko</Form.Label>
+                                        <Form.Control type="text" />
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label>Pozycja</Form.Label>
+                                        <Form.Select aria-label="Default select example">
+                                            <option>Wybierz</option>
+                                            <option value="1">Bramkarz</option>
+                                            <option value="2">Obroñca</option>
+                                            <option value="3">Pomocnik</option>
+                                            <option value="4">Napastnik</option>
+                                        </Form.Select>
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                        </Tab>
+                        <Tab eventKey="cena" title="Cena">
+                            <Row className="mb-3">
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label>PKWiU</Form.Label>
+                                        <Form.Control type="text" />
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label>Stawka VAT zakupu</Form.Label>
+                                        <Form.Select aria-label="Default select example">
+                                            <option>Wybierz</option>
+                                            <option value="1">Cegly</option>
+                                            <option value="2">Cement</option>
+                                            <option value="3">Pustaki</option>
+                                        </Form.Select>
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label>Stawka VAT sprzedazy</Form.Label>
+                                        <Form.Select aria-label="Default select example">
+                                            <option>Wybierz</option>
+                                            <option value="1">Cegly</option>
+                                            <option value="2">Cement</option>
+                                            <option value="3">Pustaki</option>
+                                        </Form.Select>
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label>Cena domyslna</Form.Label>
+                                        <Form.Control type="text" />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                        </Tab>
+                        <Tab eventKey="uwagi" title="Uwagi">
+                            <Row className="mb-3">
+                                <Col className="col-8">
+                                    <Form.Group>
+                                        <Form.Label>Dodatkowe informacje</Form.Label>
+                                        <Form.Control as="textarea" />
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label>Uwagi</Form.Label>
+                                        <Form.Control as="textarea" />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                        </Tab>
+                    </Tabs>
+                </Row>
+            </Form>
+        </Container>
+    )
+}
